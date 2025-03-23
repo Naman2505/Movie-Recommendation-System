@@ -40,8 +40,10 @@ file_path = r"C:\Users\Naman\Desktop\Data_Science\ML_Projects\Movie-Recommendati
 similarity_path = r"C:\Users\Naman\Desktop\Data_Science\ML_Projects\Movie-Recommendation-System\similarity.pkl"
 
 if os.path.exists(file_path) and os.path.exists(similarity_path):
-    movies_list = pk.load(open(file_path, "rb"))
-    similarity = pk.load(open(similarity_path, 'rb'))
+    # movies_list = pk.load(open(file_path, "rb"))
+    # similarity = pk.load(open(similarity_path, 'rb'))
+    movies_list = pd.read_pickle(file_path)
+    similarity = pd.read_pickle(similarity_path)
 else:
     st.error("🛑 Required files (movies.pkl / similarity.pkl) not found!")
     st.stop()
