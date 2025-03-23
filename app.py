@@ -36,8 +36,8 @@ def recommend(movie):
     return recommended_movies  # Returns titles only
 
 # ✅ Load Data
-file_path = r"C:\Users\Naman\Desktop\Data_Science\ML_Projects\Movie-Recommendation-System\movies.pkl"
-similarity_path = r"C:\Users\Naman\Desktop\Data_Science\ML_Projects\Movie-Recommendation-System\similarity.pkl"
+file_path = "movies.pkl"
+similarity_path = "similarity.pkl"
 
 if os.path.exists(file_path) and os.path.exists(similarity_path):
     # movies_list = pk.load(open(file_path, "rb"))
